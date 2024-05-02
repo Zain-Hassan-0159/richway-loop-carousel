@@ -348,7 +348,9 @@ class richway_Loop_Carousel extends Widget_Base {
 			'post_type',
 			[
 				'label' => esc_html__( 'Post Type', 'hub-elementor-addons' ),
-				'type' => Controls_Manager::SELECT,
+				'type' => \Elementor\Controls_Manager::SELECT2,
+				'label_block' => true,
+				'multiple' => true,
 				'options' => $this->get_all_custom_post_type(),
 				'condition' => [
 					'carousel_type' => 'post_type_content'
